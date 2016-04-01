@@ -27,15 +27,13 @@ thrift client for java
 		coffee servers.coffee servers.log false none
 		
 	2.运行client端（java实现）
-	
 		//参数一：10为并发请求线程数，参数二：10000为每个请求线程请求数，参数三：thrift server主机，参数四：thrift server主机端口
 		java cp ./client-0.0.1-SNAPSHOT-jar-with-dependencies.jar com.fun.thrift.client.Client 10 10000 192.168.113.26 9002
 	3.使用R语言统计
-	
-	主要实现思路：java客户端发请求－>node服务端中work各自打印自己所处理的记录－>使用R语言中summary函数对node中work日志进行统计
-	安装R并进入R命令行模式
-	df = read.table(file="servers.log", skip=8, header=FALSE)
-	summary(df$V1)
+		主要实现思路：java客户端发请求－>node服务端中work各自打印自己所处理的记录－>使用R语言中summary函数对node中work日志进行统计
+		安装R并进入R命令行模式
+		df = read.table(file="servers.log", skip=8, header=FALSE)
+		summary(df$V1)
 	
 五、测试结论
 
