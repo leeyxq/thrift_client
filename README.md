@@ -3,18 +3,15 @@ thrift client for java
 
 一、测试硬件环境：
 
-	client：
-                192.168.113.24	8核
-                192.168.113.118	24核
-	server：
-		192.168.113.26	8核
+	client： 192.168.113.24	8核 192.168.113.118 24核
+	server： 192.168.113.26	8核
 		
 二、软件环境
 
 	nodejs：5.6.0
 	coffee-script
 	thrift：0.9.3
-    	eclipse+j2ee
+	eclipse
 	java：1.6+
 	R语言
 	
