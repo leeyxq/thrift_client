@@ -1,5 +1,6 @@
 # thrift_client
 thrift client for java
+
 一、测试硬件环境：
 	client：
                 192.168.113.24	8核
@@ -13,9 +14,10 @@ thrift client for java
     	eclipse+j2ee
 	java	1.6+
 	R语言
+	
 三、测试目的
         nodejs在高并发长链接请求下，“rr”策略和“none”策略两者work负载均衡对比（cluster集群调度策略详细介绍：https://strongloop.com/strongblog/whats-new-in-node-js-v0-12-cluster-round-robin-load-balancing/）
-	
+
 四、测试步骤：
 	1.开启server端（node实现）
 		npm install -d
@@ -31,10 +33,13 @@ thrift client for java
 	summary(df$V1)
 	
 五、测试结论
+
 	1.client并发请求数跟server集群中work数一致或相差不大时，node集群策略“rr”模式和“none” work负载情况差别不大
 	2.client并发请求数远大于server集群中work数时，node集群策略“rr”模式好与“none”模式
+	
 六、测试统计数据
-一组：
+
+	一组：
 	服务器：集群模式“rr”＋8个work
 	客户端：并发请求线程数：80，每个并发请求线程请求10000次，2个客户端同时执行请求
 	work-30921 work-30926 work-30933 work-30939 work-30944 work-30949 work-30954 work-30959
@@ -46,8 +51,7 @@ thrift client for java
 	work-31079 work-31084 work-31089 work-31090 work-31095 work-31100 work-31105 work-31110 
 	    240000     180000     190000     160000     150000     250000     190000     240000
 
-二组：
-
+	二组：
 	服务器：集群模式“none”＋8个work
 	客户端：并发请求线程数：80，每个并发请求线程请求10000次，2个客户端同时执行请求
 	work-30792 work-30797 work-30802 work-30803 work-30808 work-30813 work-30818 work-30823
