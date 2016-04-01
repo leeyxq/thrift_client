@@ -2,8 +2,8 @@
 thrift client for java
 一、测试硬件环境：
 	client：
-		192.168.113.24	8核
-		192.168.113.118	24核
+                192.168.113.24	8核
+                192.168.113.118	24核
 	server：
 		192.168.113.26	8核
 二、软件环境
@@ -14,7 +14,7 @@ thrift client for java
 	java	1.6+
 	R语言
 三、测试目的
-	nodejs在高并发长链接请求下，“rr”策略和“none”策略两者work负载均衡对比（cluster集群调度策略详细介绍：https://strongloop.com/strongblog/whats-new-in-node-js-v0-12-cluster-round-robin-load-balancing/）
+        nodejs在高并发长链接请求下，“rr”策略和“none”策略两者work负载均衡对比（cluster集群调度策略详细介绍：https://strongloop.com/strongblog/whats-new-in-node-js-v0-12-cluster-round-robin-load-balancing/）
 	
 四、测试步骤：
 	1.开启server端（node实现）
